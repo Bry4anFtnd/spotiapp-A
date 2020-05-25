@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col">
+    <input type="text" (keyup)="buscar(termino.value)" #termino class="form-control" placeholder="Buscar artista">
+  </div>
+</div>
+<app-loading *ngIf="loading" class="m-5"></app-loading>
+<app-tarjetas *ngIf="!loading" [items]="artistas"></app-tarjetas>
+<!--en este caso y parecido al home ponemos el @input de item q ya fue puesto asi con el ngfor del tarjetahtml y en ete 
+  caso igualamos items a los artistas, varieble q viene del ts del search, en el home seria la variable nuevasCanciones q viene del ts del mismo-->

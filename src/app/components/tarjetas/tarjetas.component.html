@@ -1,0 +1,13 @@
+<div class="card-columns m-5 animated fadeIn">
+  <div (click)="verArtista(item)" *ngFor="let item of items" class="card puntero">
+    <img class="card-img-top" [src]="item.images | noimage" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text">
+        <span *ngFor="let artista of item.artists" class="badge badge-pill badge-primary">{{artista.name}}</span>
+        <!--arreglo que me va mostrar si hay mas de 1 artista-->
+        <!--ponemos otro ngFor pq necesitamos poner otro arreglo con los artistas q hacen la cancion, si fuera solo uno no habria necesidad-->
+      </p>
+    </div>
+  </div>
+</div>
