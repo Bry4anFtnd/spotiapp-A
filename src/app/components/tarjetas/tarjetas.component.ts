@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Router } from '@angular/router';
+import { Router } from '@angular/router'; // imoort necesario para navegar por las rtuas, se declara en el constrcutro
 
 @Component({
   selector: 'app-tarjetas',
