@@ -20,12 +20,12 @@ export class SpotifyService {
       // declaramos una variavle para q se almacene ese header asi
       // segun la api nos pide cierto header, en este caso solo es Authorization con su valor el q esta en comillas q es el token de autorizacion
       Authorization:
-        'Bearer BQBIIMq7sgyU8MYj3_OtUUd0tUDkN2MZpbnCODUFLffjLzq7gDZQKuG2hVU57896mgaHjshBSQ8F4SYeMgQ',
+        'Bearer BQB4LDKcfEEJ4SoMx4nAW8g_QM2JrYwHtruKJpXgH4S8K-kuyI603bnYG3QjxR7zYYesP6ahrb6V8OJhQng',
     });
 
     return this.http.get(url, { headers });
   }
-
+  // El .pipe y el .map su usan para filtrar un arreglo u objeto cuando es muy grande y asi poderlo usar en los componentes solo con la variable en este caso data
   getNewReleases() {
     return this.getQuery('browse/new-releases?limit=20').pipe(
       // asi me retorna una peticion http this.http.get(url, { headers }); se puso asi para acortar codigo pq el metodo de getArtista es iguak
@@ -46,12 +46,7 @@ export class SpotifyService {
 
   getArtista(id: string) {
     return this.getQuery(`artists/${id}`);
-    // .pipe(
-    //   // asi me retorna una peticion http this.http.get(url, { headers }); se puso asi para acortar codigo pq el metodo de getArtista es iguak
-    //   map((data: any) => {
-    //     return data.artists.items; // ahora al usar map podemos usar data sin ncesidad de los puntos para acceder a las propiedades
-    //   })
-    // );
+    // En esta funcion no necesiamos ni pipe ni map pq viene un unico artista osea q no hay q mapear el arreglo pq es solo uno
   }
 
   getTopTracks(id: string) {
