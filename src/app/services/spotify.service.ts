@@ -20,7 +20,7 @@ export class SpotifyService {
       // declaramos una variavle para q se almacene ese header asi
       // segun la api nos pide cierto header, en este caso solo es Authorization con su valor el q esta en comillas q es el token de autorizacion
       Authorization:
-        'Bearer BQB4LDKcfEEJ4SoMx4nAW8g_QM2JrYwHtruKJpXgH4S8K-kuyI603bnYG3QjxR7zYYesP6ahrb6V8OJhQng',
+        'Bearer BQB-IgqTDDHgO96pAvFTm9uXbNXS-AOMmDVRKZz9YiOIPPAY6h-X9UZrxvDgecxVEHDvPRlXBtbj1Md--l8',
     });
 
     return this.http.get(url, { headers });
